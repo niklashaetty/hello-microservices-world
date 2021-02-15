@@ -20,6 +20,12 @@ public class HelloWorldController extends BaseController {
     @GetMapping("/greeting")
     public Mono<ResponseEntity> greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         log.info("Received greeting request for name: " + name);
-        return Mono.just(ok(new Greeting(name)));
+
+        if(name.equals("Niklas")) {
+            return Mono.just(
+                    badRequest(ErrorMapper.badNameError(name)));
+        }
+        return Mono.just(
+                ok(new Greeting(name)));
     }
 }

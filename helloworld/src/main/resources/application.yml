@@ -1,9 +1,9 @@
 spring:
   application:
-    name: MyApp
+    name: helloworld
+  sleuth:
+    sampler:
+      probability: 1.0
+      percentage: 1.0
 logging:
-  level:
-    org:
-      springframework:
-        cloud:
-          sleuth: INFO
+  level.org.springframework.cloud: info
