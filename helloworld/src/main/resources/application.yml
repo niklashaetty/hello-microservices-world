@@ -1,9 +1,6 @@
 spring:
   application:
     name: helloworld
-  sleuth:
-    sampler:
-      probability: 1.0
-      percentage: 1.0
 logging:
   level.org.springframework.cloud: info
+ # level.org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG

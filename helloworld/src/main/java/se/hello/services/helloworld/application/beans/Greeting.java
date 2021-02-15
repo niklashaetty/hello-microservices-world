@@ -14,4 +14,11 @@ public class Greeting {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Greeting{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

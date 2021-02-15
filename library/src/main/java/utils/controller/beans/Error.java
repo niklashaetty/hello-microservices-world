@@ -1,4 +1,4 @@
-package utils.controller;
+package utils.controller.beans;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;

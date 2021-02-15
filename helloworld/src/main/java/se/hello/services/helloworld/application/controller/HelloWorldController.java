@@ -16,12 +16,11 @@ public class HelloWorldController extends BaseController {
 
     final Logger log = LoggerFactory.getLogger(HelloWorldController.class);
 
-    @ResponseBody
     @GetMapping("/greeting")
     public Mono<ResponseEntity> greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-        log.info("Received greeting request for name: " + name);
 
         if(name.equals("Niklas")) {
+            log.info("Found bad name!");
             return Mono.just(
                     badRequest(ErrorMapper.badNameError(name)));
         }

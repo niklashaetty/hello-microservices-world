@@ -1,6 +1,6 @@
 package se.hello.services.helloworld.application.controller;
 
-import utils.controller.Error;
+import utils.controller.beans.Error;
 
 public class ErrorMapper {
 
